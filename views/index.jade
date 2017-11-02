@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+  head
+    title Connecting phone numbers
+
+    // We use Twitter Bootstrap as the default styling for our page
+    link(rel='stylesheet', 
+      href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    link(rel='stylesheet', 
+      href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+
+    // Include CSS for our third-party telephone input jQuery plugin
+    link(rel='stylesheet', href='/vendor/intl-phone/css/intlTelInput.css')
+  body
+    .container
+      h1 Connect Agent and Client
+      hr
+
+      // C2C contact form
+      .row
+        .col-md-12
+          form(id='contactForm', role='form')
+            .form-group
+            label Client nbr
+            .form-group
+              input.form-control(type='text', id='phoneNumber',value='#{clientnbr}' 
+                placeholder='(651) 555-7889')
+            label Agent nbr 
+            .form-group
+              input.form-control(type='text', id='salesNumber', value='#{agentnbr}'
+                placeholder='(651) 555-7889')
+            label Outgoing nbr
+            .form-group
+              input.form-control(type='text', id='outgoing', 
+                placeholder='(651) 555-7889')
+            button(type='submit', class='btn btn-default') Contact
+
+    // Include page dependencies
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+
+
+
+
+    script(src='/vendor/intl-phone/js/intlTelInput.min.js')
+    // Our app's front-end JavaScript logic
+    script(src='/app.js')
+ 
+
