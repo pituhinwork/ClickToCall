@@ -35,19 +35,7 @@ module.exports = function(app) {
     
 
     var pg = require('pg')
-var PGUSER = 'svjwmybeoxaehv'
-var PGDATABASE = 'd45316l6s97891'
 
-    var config = {
-  port: 5432,
-  ssl : 'true',
-  host:'ec2-54-83-48-188.compute-1.amazonaws.com',
-  user: PGUSER, // name of the user account
-  database: PGDATABASE, // name of the database
-  max: 10, // max number of clients in the pool
-  password: '816eb1cac75dc998299c0f650dd0435faca00ac278308d59feb6d79d0d5eb105',
-  idleTimeoutMillis: 3000000 // how long a client is allowed to remain idle before being closed
-}
 
 var pool = new pg.Pool(config)
 var myClient
